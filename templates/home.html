@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <title>ALL THE THINGS</title>
+</head>
+<body>
+    <h2>All Projects & All Students</h2>
+    <div>
+        <table>
+            <th>Project Title</th>
+            {% for row in projects %}
+            <tr><td><a href={{ '/project?title=' + row[0] }}>{{ row[0] }}</a></td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    <br><br>
+    <div>
+        <table>
+            <th>Student Name</th>
+            {% for row in students %}
+            <tr><td><a href={{ '/student?github=' + row[2] }}>{{ row[0] }} {{ row[1] }}</a></td></tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

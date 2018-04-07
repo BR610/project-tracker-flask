@@ -7,10 +7,9 @@
     <h1>{{ student_data[0][0] }} {{ student_data[0][1] }}</h1>
 
     <p>GitHub Account: {{ student_data[0][2] }}</p>
-
-    <ul>{% for row in student_data %}
-        <li>Project Name: {{ row[3] }}, Grade: {{ row[4] }}</li>
+        <ul>{% for row in student_data %}
+        <li>Project Name: <a href={{ '/project?title=' + row[3] }}>{{ row[3] }}</a>, Grade: {{ row[4] }}</li>
         {% endfor %}
-    </ul>
+        </ul>
 </body>
 </html>
